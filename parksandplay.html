@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/exploreseattle-styles.css">
+    <title>Parks &amp; Play - Explore Seattle</title>
+</head>
+<body>
+  <header class="parksandplay">
+     <a class="logo" href="index.html"> <span>Explore Seattle</span></a>
+     <nav>
+      <ul class="flex-container">
+        <li>
+          <a href="thingstodo.html">THINGS TO DO</a>
+        </li>
+        <li>
+          <a href="farmersmarkets.html">FARMERS<br>MARKETS</a>
+        </li>
+        <li>
+          <a href="foodanddrink.html">FOOD &amp; DRINK</a>
+        </li>
+        <li>
+          <a href="upcomingevents.html">UPCOMING<br>EVENTS</a>
+        </li>
+        <li>
+          <a class="active-page" href="#">PARKS &amp; PLAY</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+        <div class="dropdown-content">
+          <a href="index.html">HOME</a>
+          <a href="thingstodo.html">THINGS TO DO</a>
+          <a href="farmersmarkets.html">FARMERS MARKETS</a>
+          <a href="foodanddrink.html">FOOD &amp; DRINK</a>
+          <a href="upcomingevents.html">UPCOMING EVENTS</a>
+          <a style="color: #fff42c;" href="#">PARKS &amp; PLAY</a>
+        </div>
+      </div>
+     </nav>
+     <div class="pgtitle-div">
+        <h1 class="pagetitle">Parks &amp; Play</h1>
+     </div>
+  </header>
+  <div class="intro-div">
+    <p style="margin: 0;"> The Seattle area is home to many beautiful parks and playgrounds, including many parks that feature inclusive play equipment for children
+    of all abilities. Check out one of our favorite parks, and spend a few hours enjoying the Pacifc Northwest with your family. Pack a picnic and prepare for a fun, 
+    outdoor adventure! </p>
+  </div>
+
+  <main style="padding: 0px 40px 0px 40px;" class="parks">
+    <h2 class="red" style="font-size: 1.9em;">Featured Inclusive Parks</h2>
+    <div class="flex-cards">
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./assets/images/inspirationpark2.jpg" alt="inspiration park;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Inspiration Playground</h3>
+            <h4>Location</h4>
+            <p> 10201 NE 4th St., Bellevue, WA</p>
+            <h4>About the Park</h4>
+            <p>Inspiration Playground is an innovative play space where children of all ages and abilities can explore. The park is open year round.
+            For more information, visit <a href="https://bellevuewa.gov/city-government/departments/parks/planning-and-development/downtown-park/inspiration-playground" 
+            target="_blank">Inspiration Playground</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./assets/images/juanitabeachpark2.jpg" alt="juanita beach park;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Juanita Beach Park</h3>
+            <h4>Location</h4>
+            <p> 9703 NE Juanita Dr., Kirkland, WA</p>
+            <h4>About the Park</h4>
+            <p>Juanita Beach Park has an accessible playground with a level turf play surface and adaptive swings.
+            For more information, visit <a href="https://www.kirklandwa.gov/Government/Departments/Parks-and-Community-Services/Find-a-Park/Juanita-Beach-Park" 
+            target="_blank">Juanita Beach Park</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./assets/images/meadowcrest2.jpg" alt="meadow crest park;">
+          </div>
+          <div class="flip-card-back">
+            <h3>Meadow Crest Park</h3>
+            <h4>Location</h4>
+            <p> 3000 NE 16th St., Renton, WA</p>
+            <h4>About the Park</h4>
+            <p>Meadow Crest Park features a one-acre accessible playground that includes sensory activities and a caterpillar sculpture.
+            For more information, visit <a href="https://www.playcreation.com/project/meadow-crest-park/"
+            target="_blank">Meadow Crest Park</a>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 style="margin-top: 80px; font-family: Montserrat Regular; font-size: 1.9em;" class="red">GALLERY OF SEATTLE PARKS</h2>
+
+    <div class="lightbox">
+
+      <div class="row">
+
+        <div class="column">
+          <img src="./assets/images/carkeek.jpg" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/artists.jpg" style="width: 100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/greenlake2.jpg" style="width: 100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/westwoodlandparkplayground2.jpg" style="width: 100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/seattlechildrensplaygarden2.jpg" style="width: 100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/wallingfordplayfield2.jpg" style="width: 100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/volunteerpark.jpg" style="width: 100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+          <img src="./assets/images/meridianplayground3.jpg" style="width: 100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+      
+      </div>
+
+      <div id="myModal" class="modal">
+        
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 8</div>
+            <img src="./assets/images/carkeek.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 8</div>
+            <img src="./assets/images/artists.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 8</div>
+            <img src="./assets/images/greenlake2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 8</div>
+            <img src="./assets/images/westwoodlandparkplayground2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 8</div>
+            <img src="./assets/images/seattlechildrensplaygarden2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+            <img src="./assets/images/wallingfordplayfield2.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">7 / 8</div>
+            <img src="./assets/images/volunteerpark.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">8 / 8</div>
+            <img src="./assets/images/meridianplayground3.jpg" style="width:100%">
+          </div>
+
+          <a class="prevb" onClick="plusSlides(-1)">&#10094;</a>
+          <a class="nextb" onClick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Careek Park Meadowdale Beach"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Artists at Play Playground"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Greenlake Park"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="West Woodland Park Playground"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Seattle Children's Play Garden"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Wallingford Playfield"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Volunteer Park"></div>
+          </div>
+
+          <div class="column">
+            <div class="demo cursor" label="Meridian Playground"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+  
+  <footer>
+
+    <ul class="footer-info">
+      <li><span class="fa fa-copyright fa-1x"></span>2023 Explore Seattle
+      </li>
+      <li>Terms of Use
+      </li>
+      <li>Privacy Policy
+      </li>
+    </ul>
+
+    <form class="newsletter">
+      <span style="color:#fff42c; font-size: 0.9em; font-family: Montserrat Bold;">Sign up for our newsletter</span> <br>
+      <input type="text" placeholder="enter email" style="border: 0px; padding: 3px; margin-top: 5px;"> 
+      <button style="background-color: #fff42c; border: 2px solid #fff42c; padding: 2px; border-radius: 2px;">Sign Up</button>
+    </form>
+
+    <div class="social-icon">
+      <a href="" target="_blank" class="fa fa-facebook-f fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-instagram fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-twitter fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-pinterest fa-lg fa-2x padding-right"></a>
+    </div>
+    
+  </footer>
+
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].getAttribute("label");
+    }
+  </script>
+</body>
+</html>

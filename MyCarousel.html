@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS for slide transition */
+        .slideshow-container {
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            overflow: hidden;
+            margin: auto;
+            background-color: black;
+        }
+
+        .Containers {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: transform 0.5s ease, visibility 1s;
+        }
+
+        .Containers.show {
+            visibility: visible;
+        }
+
+        .Containers.hide {
+            visibility: hidden;
+        }
+
+        .content-red {
+            background-color: red;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content-green {
+            background-color: green;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content-blue {
+            background-color: blue;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Style for navigation dots */
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dots {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .enable {
+            background-color: #717171;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #00000050;
+            height: 50px;
+            color: white;
+            width: 100%;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slides -->
+    <div class="carousel-area">
+        <div class="slideshow-container">
+            <div class="Containers show">
+                <div class="content-red"></div>
+                <div class="caption">My caption here</div>
+            </div>
+            <div class="Containers">
+                <div class="content-green"></div>
+                <div class="caption">My caption here</div>
+            </div>
+            <div class="Containers">
+                <div class="content-blue"></div>
+                <div class="caption">My caption here</div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="dots-container">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+            <!-- Add more dots as needed -->
+        </div>
+    </div>
+
+    <script>
+        var slidePosition = 2;
+        var slideInterval; // To store the interval ID
+        var isTransitioning = false;
+
+        SlideShow(slidePosition);
+        startSlideShow(); // Start autoplay
+
+        function plusSlides(n) {
+            if (!isTransitioning) {
+                SlideShow(slidePosition += n);
+            }
+        }
+
+        function currentSlide(n) {
+            if (!isTransitioning) {
+                SlideShow(slidePosition = n);
+            }
+        }
+
+        function SlideShow(n) {
+            var i;
+            var slides = document.getElementsByClassName("Containers");
+            var circles = document.getElementsByClassName("dots");
+
+            if (n > slides.length) { slidePosition = 1; }
+            if (n < 1) { slidePosition = slides.length; }
+
+            // Show the current slide
+            slides[slidePosition - 1].style.transform = "translateX(0)";
+            slides[slidePosition - 1].classList.add("show");
+
+            // Hide the previous slide using the slide-out transition
+            var previousSlidePosition = (slidePosition - 2 + slides.length) % slides.length;
+            slides[previousSlidePosition].style.transform = "translateX(-100%)";
+            slides[previousSlidePosition].classList.remove("show");
+            slides[previousSlidePosition].classList.add("hide");
+
+            // Hide the next slide using the slide-out transition
+            var nextSlidePosition = slidePosition % slides.length;
+            slides[nextSlidePosition].style.transform = "translateX(100%)";
+            slides[nextSlidePosition].classList.remove("show");
+            slides[nextSlidePosition].classList.add("hide");
+
+            // Update navigation dots
+            for (i = 0; i < circles.length; i++) {
+                circles[i].className = circles[i].className.replace(" enable", "");
+            }
+            circles[slidePosition - 1].className += " enable";
+
+            // Set a flag for transition in progress
+            isTransitioning = true;
+            setTimeout(function () {
+                // Reset the flag after the transition is complete
+                isTransitioning = false;
+                // Show the previous and next slides after the transition is complete
+                slides[nextSlidePosition].classList.remove("hide");
+            }, 500); // Wait for the slide transition duration (0.5s) before allowing the next transition
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(function () {
+                plusSlides(1);
+            }, 3000); // Change slide every 3 seconds (adjust the interval as needed)
+        }
+
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        // Pause the autoplay when the user hovers over the slideshow
+        document.querySelector(".slideshow-container").addEventListener("mouseenter", function () {
+            stopSlideShow();
+        });
+
+        // Resume the autoplay when the user stops hovering over the slideshow
+        document.querySelector(".slideshow-container").addEventListener("mouseleave", function () {
+            startSlideShow();
+        });
+    </script>
+</body>
+</html>

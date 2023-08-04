@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/exploreseattle-styles.css">
+    <title>Farmers Markets - Explore Seattle</title>
+</head>
+<body>
+  <header class="farmersmarkets">
+     <a class="logo" href="exploreseattle-index.html"> <span>Explore Seattle</span></a>
+     <nav>
+      <ul class="flex-container">
+        <li>
+          <a href="thingstodo.html">THINGS TO DO</a>
+        </li>
+        <li>
+          <a class="active-page" href="#">FARMERS<br>MARKETS</a>
+        </li>
+        <li>
+          <a href="foodanddrink.html">FOOD &amp; DRINK</a>
+        </li>
+        <li>
+          <a href="upcomingevents.html">UPCOMING<br>EVENTS</a>
+        </li>
+        <li>
+          <a href="parksandplay.html">PARKS &amp; PLAY</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+        <div class="dropdown-content">
+          <a href="exploreseattle-index.html">HOME</a>
+          <a href="thingstodo.html">THINGS TO DO</a>
+          <a style="color: #fff42c;" href="#">FARMERS MARKETS</a>
+          <a href="foodanddrink.html">FOOD &amp; DRINK</a>
+          <a href="upcomingevents.html">UPCOMING EVENTS</a>
+          <a href="parksandplay.html">PARKS &amp; PLAY</a>
+        </div>
+      </div>
+     </nav>
+     <div class="pgtitle-div">
+        <h1 class="pagetitle">Farmers Markets</h1>
+     </div>
+  </header>
+  <div class="intro-div">
+    <p style="margin: 0;"> Seattle is home to many seasonal and year-round neighborhood farmers markets. Your family will enjoy gourmet food, fresh meat and produce,
+    and live entertainment. Shop a wide selection of vintage clothing, sauces and candies, and handmade jewelry, soaps, and candles. Check out this month's featured 
+    farmers markets, and spend a few hours experiencing the work of local artists. </p>
+  </div>
+  <main>
+
+    <div class="carousel-div">
+      <section>
+        <h3 class="red" style="margin-top: 0px; font-size: 2em; padding-left: 40px;">MARKET HIGHLIGHTS</h3>
+        <!-- Slides -->
+        <div class="carousel-area">
+          <div class="slideshow-container">
+              <div class="car-containers show">
+                  <div><img src="./assets/images/fmarket3.jpg" width="100%"></div>
+                  <div class="caption">Fresh flowers and seasonal produce</div>
+              </div>
+              <div class="car-containers">
+                  <div><img src="./assets/images/fmarket2.jpg" width="100%"></div>
+                  <div class="caption">Fresh fruits and vegetables</div>
+              </div>
+              <div class="car-containers">
+                  <div><img src="./assets/images/fmarket1.jpg" width="100%"></div>
+                  <div class="caption">Gifts and vintage clothing</div>
+              </div>
+              <!-- Add more slides as needed -->
+          </div>
+
+          <!-- Navigation dots -->
+          <div class="dots-container">
+              <span class="dots" onclick="currentSlide(1)"></span>
+              <span class="dots" onclick="currentSlide(2)"></span>
+              <span class="dots" onclick="currentSlide(3)"></span>
+              <!-- Add more dots as needed -->
+          </div>
+        </div>        
+      </section>
+    </div> 
+
+    <div class="markets-div">
+      <h2 style="margin-top: 0; font-size: 2em;" class="red">Featured Markets</h2>
+      <div class="scrolling">
+
+        <div>
+          <h3 class="red" style="margin-top: 0; font-size: 1.5em;">MAGNOLIA MARKET</h3>
+          <h4>Dates and Times</h4>
+          <p>10:00 AM-2:00 PM on Saturdays, June 3 through October 14, 2023  (plus additional Harvest Market on November 18, 2023)</p>
+          <h4>Location and Parking</h4>
+          <p>West McGraw Street and 33rd Avenue West (in Magnolia Village). Free street parking nearby and bike parking in Magnolia Village. 
+           Bus route 24 from Downtown Seattle.</p>
+          <h4>Additional Information</h4>
+          <p>ADA accessible market. All vendors accept cash, credit, and debit. Part of Seattle Neighborhood Farmers Markets.</p>
+          <div class="divider"></div>
+        </div>
+
+        <div>
+          <h3 class="red" style="font-size: 1.5em;">SLU MARKET</h3>
+          <h4>Dates and Times</h4>
+          <p>11:00 AM-4:00 PM on Saturdays, May 6 through September 30, 2023</p>
+          <h4>Location and Parking</h4>
+          <p>139 9th Avenue North. Next door to Denny Park in South Lake Union neighborhood. Parking on street and in nearby parking garages.</p>
+          <h4>Additional Information</h4>
+          <p>Downtown Seattle&#39;s largest street market. Over 65 booths and food trucks (including treats, crafts, and vintage clothing). DJs perform in the park.</p>
+          <div class="divider"></div>
+        </div>
+
+        <div>
+          <h3 class="red" style="font-size: 1.5em;">CAPITOL HILL MARKET</h3>
+          <h4>Dates and Times</h4>
+          <p>11:00 AM-3:00 PM on Sundays, year- round; 3:00 PM-7:00 PM on Tuesdays, July 11 through September 26, 2023</p>
+          <h4>Location and Parking</h4>
+          <p>East Denny Way between Broadway and 10th Avenue East. Free street parking on Sundays. ADA Parking on 11th near intersection with Denny (SE corner). </p>
+          <h4>Additional Information</h4>
+          <p>ADA accessible market. All vendors accept cash, credit, and debit. Part of Seattle Neighborhood Farmers Markets.</p>
+        </div>
+ 
+      </div>
+    </div>
+  </main>
+  <footer>
+
+    <ul class="footer-info">
+      <li><span class="fa fa-copyright fa-1x"></span>2023 Explore Seattle
+      </li>
+      <li>Terms of Use
+      </li>
+      <li>Privacy Policy
+      </li>
+    </ul>
+
+    <form class="newsletter">
+      <span style="color:#fff42c; font-size: 0.9em; font-family: Montserrat Bold;">Sign up for our newsletter</span> <br>
+      <input type="text" placeholder="enter email" style="border: 0px; padding: 3px; margin-top: 5px;"> 
+      <button style="background-color: #fff42c; border: 2px solid #fff42c; padding: 2px; border-radius: 2px;">Sign Up</button>
+    </form>
+
+    <div class="social-icon">
+      <a href="" target="_blank" class="fa fa-facebook-f fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-instagram fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-twitter fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-pinterest fa-lg fa-2x padding-right"></a>
+    </div>
+    
+  </footer>
+
+  <script>
+    var slidePosition = 2;
+    var slideInterval; // To store the interval ID
+    var isTransitioning = false;
+
+    SlideShow(slidePosition);
+    startSlideShow(); // Start autoplay
+
+    function plusSlides(n) {
+        if (!isTransitioning) {
+            SlideShow(slidePosition += n);
+        }
+    }
+
+    function currentSlide(n) {
+        if (!isTransitioning) {
+            SlideShow(slidePosition = n);
+        }
+    }
+
+    function SlideShow(n) {
+        var i;
+        var slides = document.getElementsByClassName("car-containers");
+        var circles = document.getElementsByClassName("dots");
+
+        if (n > slides.length) { slidePosition = 1; }
+        if (n < 1) { slidePosition = slides.length; }
+
+        // Show the current slide
+        slides[slidePosition - 1].style.transform = "translateX(0)";
+        slides[slidePosition - 1].classList.add("show");
+
+        // Hide the previous slide using the slide-out transition
+        var previousSlidePosition = (slidePosition - 2 + slides.length) % slides.length;
+        slides[previousSlidePosition].style.transform = "translateX(-100%)";
+        slides[previousSlidePosition].classList.remove("show");
+        slides[previousSlidePosition].classList.add("hide");
+
+        // Hide the next slide using the slide-out transition
+        var nextSlidePosition = slidePosition % slides.length;
+        slides[nextSlidePosition].style.transform = "translateX(100%)";
+        slides[nextSlidePosition].classList.remove("show");
+        slides[nextSlidePosition].classList.add("hide");
+
+        // Update navigation dots
+        for (i = 0; i < circles.length; i++) {
+            circles[i].className = circles[i].className.replace(" enable", "");
+        }
+        circles[slidePosition - 1].className += " enable";
+
+        // Set a flag for transition in progress
+        isTransitioning = true;
+        setTimeout(function () {
+            // Reset the flag after the transition is complete
+            isTransitioning = false;
+            // Show the previous and next slides after the transition is complete
+            slides[nextSlidePosition].classList.remove("hide");
+        }, 500); // Wait for the slide transition duration (0.5s) before allowing the next transition
+    }
+
+    function startSlideShow() {
+        slideInterval = setInterval(function () {
+            plusSlides(1);
+        }, 3000); // Change slide every 3 seconds (adjust the interval as needed)
+    }
+
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+
+    // Pause the autoplay when the user hovers over the slideshow
+    document.querySelector(".slideshow-container").addEventListener("mouseenter", function () {
+        stopSlideShow();
+    });
+
+    // Resume the autoplay when the user stops hovering over the slideshow
+    document.querySelector(".slideshow-container").addEventListener("mouseleave", function () {
+        startSlideShow();
+    });
+  </script>
+ </body>
+</html>

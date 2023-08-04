@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/exploreseattle-styles.css">
+    <title>Food &amp; Drink - Explore Seattle</title>
+</head>
+<body>
+  <header class="foodanddrink">
+     <a class="logo" href="index.html"> <span>Explore Seattle</span></a>
+     <nav>
+      <ul class="flex-container">
+        <li>
+          <a href="thingstodo.html">THINGS TO DO</a>
+        </li>
+        <li>
+          <a href="farmersmarkets.html">FARMERS<br>MARKETS</a>
+        </li>
+        <li>
+          <a class="active-page" href="#">FOOD &amp; DRINK</a>
+        </li>
+        <li>
+          <a href="upcomingevents.html">UPCOMING<br>EVENTS</a>
+        </li>
+        <li>
+          <a href="parksandplay.html">PARKS &amp; PLAY</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+        <div class="dropdown-content">
+          <a href="index.html">HOME</a>
+          <a href="thingstodo.html">THINGS TO DO</a>
+          <a href="farmersmarkets.html">FARMERS MARKETS</a>
+          <a style="color: #fff42c;" href="#">FOOD &amp; DRINK</a>
+          <a href="upcomingevents.html">UPCOMING EVENTS</a>
+          <a href="parksandplay.html">PARKS &amp; PLAY</a>
+        </div>
+      </div>
+     </nav>
+     <div class="pgtitle-div">
+        <h1 class="pagetitle">Food &amp; Drink</h1>
+     </div>
+  </header>
+  <div class="intro-div">
+    <p style="margin: 0;"> Seattle is home to many seasonal and year-round neighborhood farmers markets. Your family will enjoy gourmet food, fresh meat and produce,
+    and live entertainment. Shop a wide selection of vintage clothing, sauces and candies, and handmade jewelry, soaps, and candles. Check out this month's featured 
+    farmers markets, and spend a few hours experiencing the work of local artists. </p>
+  </div>
+
+  <main style="margin-bottom: 60px;">
+
+    <div class="table-div">
+
+      <div class="sortselect">
+        Sort by:
+        <select id="tblsort" class="sortselect" name="tablesort" onchange="sortTable(this.value, this.options[this.selectedIndex].getAttribute('sortdir'))">
+          <option value = 1 sortdir = "asc"> by Name ASC</option>
+          <option value = 1 sortdir = "desc"> by Name DESC</option>
+          <option value = 2 sortdir = "asc"> by Cuisine ASC</option>
+          <option value = 2 sortdir = "desc"> by Cuisine DESC</option>
+          <option value = 4 sortdir = "asc"> by Price ASC</option>
+          <option value = 4 sortdir = "desc"> by Price DESC</option>
+        </select>
+      </div>
+
+      <table id="foodTable" class="foodtable">
+
+        <thead>
+          <tr>
+            <th style="cursor: default;">Restaurant</th>
+            <th class="sort-label" onclick="sortTable(1,'asc')">Name</th>
+            <th class="sort-label" onclick="sortTable(2,'asc')">Cuisine</th>
+            <th class="sort-label" onclick="sortTable(3,'asc')" >Location</th>
+            <th class="sort-label" class="price" onclick="sortTable(4,'asc')">Price</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/honestbiscuits.png"></td>
+          <td class="text-cell bold" cell-label="Name">Honest Biscuits</td>
+          <td class="text-cell" cell-label="Cuisine">Breakfast and Lunch <br>Biscuits and sandwiches</td>
+          <td class="text-cell" cell-label="Location"><p>1901 Western Ave. <br> <a href="http://honestbiscuits.com" target="_blank">Honest Biscuits</a></td>
+          <td class="text-cell price" cell-label="Price">$$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/alaskansourdough.png"></td>
+          <td class="text-cell bold" cell-label="Name">Alaskan Sourdough Bakery</td>
+          <td class="text-cell" cell-label="Cuisine">Breakfast and Lunch <br> Bread and sandwiches</td>
+          <td class="text-cell" cell-label="Location">1301 Alaskan Way (on Pier 57)<br> <a href="http://alaskansourdoughbakeryseattle.com" target="_blank">Alaskan Sourdough Bakery</a></td>
+          <td class="text-cell price" cell-label="Price">$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/ivars.png"></td>
+          <td class="text-cell bold" cell-label="Name">Ivars on Pier 54</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Seafood entrees and chowder</td>
+          <td class="text-cell" cell-label="Location">1001 Alaskan Way (on Pier 54)<br> <a href="http://www.ivars.com/pier-54-fish-bar" target="_blank">Ivars on Pier 54</a></td>
+          <td class="text-cell price" cell-label="Price">$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/crabpot.png"></td>
+          <td class="text-cell bold" cell-label="Name">The Crab Pot Seattle</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Seafood entrees and burgers</td>
+          <td class="text-cell" cell-label="Location">1301 Alaskan Way (on Pier 57)<br><a href="http://www.thecrabpotseattle.com" target="_blank">The Crab Pot Seattle</a></td>
+          <td class="text-cell price" cell-label="Price">$$$$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/fishermans.png"></td>
+          <td class="text-cell bold" cell-label="Name">Fisherman's Restaurant</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Seafood entrees and burgers</td>
+          <td class="text-cell" cell-label="Location">1301 Alaskan Way (on Pier 57)<br><a href="http://www.fishermansrestaurantseattle.com" target="_blank">Fisherman's Restaurant</a></td>
+          <td class="text-cell price" cell-label="Price">$$$$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/dailydozen.png"></td>
+          <td class="text-cell bold" cell-label="Name">Daily Dozen <br> Doughnut Company</td>
+          <td class="text-cell" cell-label="Cuisine">Mini doughnuts and coffee</td>
+          <td class="text-cell" cell-label="Location">93 Pike Street<br><a href="https://www.pikeplacemarket.org/vendor/daily-dozen-doughnut-company/" target="_blank">Daily Dozen Doughnut Company</a></td>
+          <td class="text-cell price" cell-label="Price">$</td>
+        </tr>
+
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/beechers.png"></td>
+          <td class="text-cell bold" cell-label="Name">Beecher's Handmade Cheese</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Macaroni and cheese, sandwiches</td>
+          <td class="text-cell" cell-label="Location">1600 Pike Street<br><a href="http://beechershandmadecheese.com" target="_blank">Beecher's Handmade Cheese</a></td>
+          <td class="text-cell price" cell-label="Price">$$</td>
+        </tr>
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/cafeflora.png"></td>
+          <td class="text-cell bold" cell-label="Name">Cafe Flora</td>
+          <td class="text-cell" cell-label="Cuisine">Breakfast and lunch <br> Vegetarian and vegan dishes</td>
+          <td class="text-cell" cell-label="Location">2901 E. Madison Street<br><a href="http://cafeflora.com" target="_blank">Cafe Flora</a></td>
+          <td class="text-cell price" cell-label="Price">$$$</td>
+        </tr>
+        <tr>
+          <td class="text-cell logoimg" cell-label=""><img class="restaurant-logo" src="./assets/images/humblepie.png"></td>
+          <td class="text-cell bold" cell-label="Name">Humble Pie</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Italian entrees and pizza</td>
+          <td class="text-cell" cell-label="Location">525 Rainier Ave. S.<br><a href="http://humblepieseattle.com" target="_blank">Humble Pie</a></td>
+          <td class="text-cell price" cell-label="Price">$$$</td>
+        </tr>
+        <tr>
+          <td class="text-cell logoimg" cell-label=" "><img class="restaurant-logo" src="./assets/images/redmill.jpg"></td>
+          <td class="text-cell bold" cell-label="Name">Red Mill Burgers</td>
+          <td class="text-cell" cell-label="Cuisine">Lunch and dinner <br> Burgers and sandwiches</td>
+          <td class="text-cell" cell-label="Location">1312 N. 67th St.<br>1613 W. Dravus St.<br><a href="http://redmillburgers.com" target="_blank">Red Mill Burgers</a></td>
+          <td class="text-cell price" cell-label="Price">$$$</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <ul class="footer-info">
+      <li><span class="fa fa-copyright fa-1x"></span>2023 Explore Seattle
+      </li>
+      <li>Terms of Use
+      </li>
+      <li>Privacy Policy
+      </li>
+    </ul>
+
+    <form class="newsletter">
+      <span style="color:#fff42c; font-size: 0.9em; font-family: Montserrat Bold;">Sign up for our newsletter</span> <br>
+      <input type="text" placeholder="enter email" style="border: 0px; padding: 3px; margin-top: 5px;"> 
+      <button style="background-color: #fff42c; border: 2px solid #fff42c; padding: 2px; border-radius: 2px;">Sign Up</button>
+    </form>
+
+    <div class="social-icon">
+      <a href="" target="_blank" class="fa fa-facebook-f fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-instagram fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-twitter fa-lg fa-2x padding-right"></a>
+      <a href="" target="_blank" class="fa fa-pinterest fa-lg fa-2x padding-right"></a>
+    </div>
+    
+  </footer>
+
+  <script>
+    function sortTable(n,z) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("foodTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = z === "asc" ? "asc" : "desc";
+  
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+  </script>
+  </body>
+</html>
