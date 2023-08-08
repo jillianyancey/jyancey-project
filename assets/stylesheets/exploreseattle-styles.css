@@ -908,6 +908,7 @@ img.hover-shadow {
 
     .logoimg {
         background-color: inherit;
+        height:auto;
     }
 
     .text-cell {
