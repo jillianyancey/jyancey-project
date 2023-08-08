@@ -583,7 +583,7 @@ header.foodanddrink {
 }
 
 .sorted {
-    color:#fff42c;
+    color:#fff42c !important;
 }
 
 .restaurant-logo {
