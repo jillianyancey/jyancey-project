@@ -88,6 +88,8 @@ nav ul li a {
     font-size: 0.9em;
     font-family: "Montserrat Bold"
 } 
+
+
 /* END NAVIGATION STYLES HEADER */
 
 /* STYLING HOVER NAV ITEM*/
@@ -580,7 +582,7 @@ header.foodanddrink {
     color:#fff42c;
 }
 
-.sort-label:active {
+.sorted {
     color:#fff42c;
 }
 

@@ -194,6 +194,11 @@
   switching = true;
   //Set the sorting direction to ascending:
   dir = z === "asc" ? "asc" : "desc";
+  var headers=table.getElementsByTagName("th");
+  for (var i = 0; i < headers.length; i++) {
+    headers [i].classList.remove("sorted");
+  }
+  headers[n].classList.add("sorted");
   
   /*Make a loop that will continue until
   no switching has been done:*/
