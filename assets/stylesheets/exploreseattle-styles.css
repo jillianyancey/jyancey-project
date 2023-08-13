@@ -855,6 +855,19 @@ img.hover-shadow {
         width: 100%; 
         padding: 20px 40px 0 40px;
     }
+
+    .markets-div {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 877px) {
+    .event-details {
+        width: 100%;
+        min-width: 400px;
+        float: left;
+        padding: 0px 80px 0px 6%;
+    }
 }
 
 @media screen and (max-width: 835px) {
